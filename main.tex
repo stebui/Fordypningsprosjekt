@@ -1,0 +1,47 @@
+\documentclass{scrreprt}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.12}
+\usepackage{textcomp}
+
+\usepackage{amsmath} % Math
+\usepackage{hyperref} % Hyperlinks
+\usepackage[noabbrev]{cleveref} % Clickalbe hyperlinks
+\usepackage[parfill]{parskip} % Remove intent on paragraph
+
+
+% Edit the meta.tex file to change title and author names
+\input{meta.tex}
+
+\begin{document}
+% The title page
+\input{title.tex}
+
+\input{content/00-Abstract.tex}
+\thispagestyle{empty}
+
+\clearpage
+\setcounter{page}{1}
+
+\tableofcontents
+
+\listoffigures
+\addcontentsline{toc}{chapter}{\listfigurename}
+
+\listoftables
+\addcontentsline{toc}{chapter}{\listtablename}
+
+% Main matter - edit corresponding file under content/ to change
+\input{content/01-Introduction.tex}
+\input{content/XX-Conclusion.tex}
+
+
+% Bibliography - edit references.bib and use the \cite command in text
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
