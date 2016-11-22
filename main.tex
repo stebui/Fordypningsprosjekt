@@ -22,13 +22,21 @@
 % The title page
 \input{title.tex}
 
+\input{content/0-Preface.tex}
+\thispagestyle{empty}
+
+\clearpage
 \input{content/00-Abstract.tex}
 \thispagestyle{empty}
 
 \clearpage
+\pagenumbering{Roman}
 \setcounter{page}{1}
 
 \tableofcontents
+\addcontentsline{toc}{chapter}{Preface}
+\addcontentsline{toc}{chapter}{Abstract}
+\addcontentsline{toc}{chapter}{Table of Contents}
 
 \listoffigures
 \addcontentsline{toc}{chapter}{\listfigurename}
@@ -36,8 +44,13 @@
 \listoftables
 \addcontentsline{toc}{chapter}{\listtablename}
 
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
 % Main matter - edit corresponding file under content/ to change
 \input{content/01-Introduction.tex}
+\input{content/XX-Discussion.tex}
 \input{content/XX-Conclusion.tex}
 
 
