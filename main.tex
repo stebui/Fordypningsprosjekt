@@ -13,36 +13,54 @@
 \usepackage{hyperref} % Hyperlinks
 \usepackage[noabbrev]{cleveref} % Clickalbe hyperlinks
 \usepackage[parfill]{parskip} % Remove intent on paragraph
+\usepackage{caption} % add captions
+\usepackage{url} % URLs
 
+\usepackage{glossaries} % for abbreviation list
+%\usepackage[doublespacing]{setspace}
+%\usepackage[nopostdot,style=super,nonumberlist,toc]{glossaries}
 
 % Edit the meta.tex file to change title and author names
+
+\usepackage{tocbibind} % fix for wrong hyperlink for toc, tof and tot
+
 \input{meta.tex}
+
+\makeglossaries
+
+\input{appendix/Abbreviations.tex}
 
 \begin{document}
 % The title page
 \input{title.tex}
 
-\input{content/0-Preface.tex}
-\thispagestyle{empty}
-
-\clearpage
-\input{content/00-Abstract.tex}
-\thispagestyle{empty}
-
-\clearpage
 \pagenumbering{Roman}
 \setcounter{page}{1}
 
-\tableofcontents
+\phantomsection
 \addcontentsline{toc}{chapter}{Preface}
+\input{content/0-Preface.tex}
+
+
+\clearpage
+\phantomsection
 \addcontentsline{toc}{chapter}{Abstract}
-\addcontentsline{toc}{chapter}{Table of Contents}
+\input{content/00-Abstract.tex}
+
+
+\clearpage
+%\addcontentsline{toc}{chapter}{Table of Contents}
+\tableofcontents
 
 \listoffigures
-\addcontentsline{toc}{chapter}{\listfigurename}
+%\addcontentsline{toc}{chapter}{\listfigurename}
 
 \listoftables
-\addcontentsline{toc}{chapter}{\listtablename}
+%\addcontentsline{toc}{chapter}{\listtablename}
+
+\glsaddall % make it possible to print glossary without references
+\printglossary[title=Abbreviations,nonumberlist] % print the glossary
+\addcontentsline{toc}{chapter}{Abbreviations}
 
 \clearpage
 \pagenumbering{arabic}
@@ -50,11 +68,27 @@
 
 % Main matter - edit corresponding file under content/ to change
 \input{content/01-Introduction.tex}
+\input{content/02-Existing.tex}
+\input{content/03-Theory.tex}
+\input{content/04-GUI.tex}
 \input{content/XX-Discussion.tex}
 \input{content/XX-Conclusion.tex}
 
 
 % Bibliography - edit references.bib and use the \cite command in text
+\renewcommand{\bibname}{References}
 \bibliographystyle{plain}
 \bibliography{references}
+%\addcontentsline{toc}{chapter}{\bibname}
+
+\clearpage
+\input{appendix/Appendix.tex}
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Appendix}
+
+\pagenumbering{arabic}% resets `page` counter to 1
+\renewcommand*{\thepage}{A-\arabic{page}}
+
+
 \end{document}
