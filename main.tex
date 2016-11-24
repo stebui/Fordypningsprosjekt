@@ -30,10 +30,13 @@
 
 \input{appendix/Abbreviations.tex}
 
+%----- DOCUMENT -----
 \begin{document}
+
 % The title page
 \input{title.tex}
 
+%Roman numbering
 \pagenumbering{Roman}
 \setcounter{page}{1}
 
@@ -59,7 +62,7 @@
 %\addcontentsline{toc}{chapter}{\listtablename}
 
 \glsaddall % make it possible to print glossary without references
-\printglossary[title=Abbreviations,nonumberlist] % print the glossary
+\printglossary[title=Abbreviations,nonumberlist, style = custom_super] % print the glossary
 \addcontentsline{toc}{chapter}{Abbreviations}
 
 \clearpage
@@ -73,7 +76,6 @@
 \input{content/04-GUI.tex}
 \input{content/XX-Discussion.tex}
 \input{content/XX-Conclusion.tex}
-
 
 % Bibliography - edit references.bib and use the \cite command in text
 \renewcommand{\bibname}{References}
@@ -89,6 +91,5 @@
 
 \pagenumbering{arabic}% resets `page` counter to 1
 \renewcommand*{\thepage}{A-\arabic{page}}
-
 
 \end{document}
