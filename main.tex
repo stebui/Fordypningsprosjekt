@@ -1,7 +1,6 @@
 \documentclass{scrreprt}
 \usepackage[utf8]{inputenc}
 
-
 \usepackage{natbib}
 \usepackage{graphicx}
 \usepackage{tikz}
@@ -11,14 +10,17 @@
 
 \usepackage{amsmath} % Math
 \usepackage{hyperref} % Hyperlinks
-\usepackage[noabbrev]{cleveref} % Clickalbe hyperlinks
+\usepackage[noabbrev]{cleveref} % Clickable hyperlinks
 \usepackage[parfill]{parskip} % Remove intent on paragraph
 \usepackage{caption} % add captions
 \usepackage{url} % URLs
+\usepackage{pdfpages} %add pdf as pages
 
 \usepackage{glossaries} % for abbreviation list
 %\usepackage[doublespacing]{setspace}
 %\usepackage[nopostdot,style=super,nonumberlist,toc]{glossaries}
+
+\renewcommand{\baselinestretch}{1.5}
 
 % Edit the meta.tex file to change title and author names
 
@@ -74,6 +76,7 @@
 \input{content/02-Existing.tex}
 \input{content/03-Theory.tex}
 \input{content/04-GUI.tex}
+\input{content/05-GeometricModels.tex}
 \input{content/XX-Discussion.tex}
 \input{content/XX-Conclusion.tex}
 
@@ -91,5 +94,10 @@
 
 \pagenumbering{arabic}% resets `page` counter to 1
 \renewcommand*{\thepage}{A-\arabic{page}}
+
+\input{appendix/A-1.tex}
+%\addcontentsline{toc}{chapter}{B Project Assignment}
+\input{appendix/A-2.tex}
+%\addcontentsline{toc}{chapter}{C Risk Assessment}
 
 \end{document}
