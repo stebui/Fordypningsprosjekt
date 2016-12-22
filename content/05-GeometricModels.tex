@@ -1,7 +1,10 @@
-\chapter{Geometric models}
+\chapter{Controlling vehicle tools}
+
+So far a control system for vehicles is implemented with a GUI. This chapter takes a look on how to proceed with embedding the control system of the associated tools from a vehicle. Since only one model contains an end-effector, the generalised system will be based on the serial manipulator model.
 
 \section{Serial Manipulator}
-A virtual model of a robot arm in GeoMod have already been created from earlier student works. This model was further used in this project as a base to develop a general control systems for tools and vehicles. The model of the serial manipulator in GeoMod can be seen in \Cref{fig:SerialManipulator}. The serial manipulator was created from a serial of ordinary models, constructed as parts, that is connected with properties linked as joints to a robot arm.
+
+A virtual model of a robot arm in GeoMod have already been created from earlier student works. This model will be further used in this project as a base to develop a general control system for tools and vehicles. The model of the serial manipulator in GeoMod can be seen in \Cref{fig:SerialManipulator}. The serial manipulator was created from a series of models, created as parts, which is connected with characteristics as linked joints.
 
 \begin{figure}[ht]
     \centering
@@ -12,7 +15,7 @@ A virtual model of a robot arm in GeoMod have already been created from earlier 
 
 
 \section{Kinematics}
-It was mentioned that from the work of Martin Lygre Fuglevik, the control system was partially implemented. Most of the implementation worked as it should, but some occurence regarding rotation in motion to a specific path, did not work as prompted. Some small alteration had to be done to the model before continuing the implementation of a control system.
+It was mentioned that from the work of Martin Lygre Fuglevik, the control system for desired position and orientation of objects along a network of paths was partially implemented. Most of the implementation worked as it should, but some occurrence regarding rotation in motion to a particular path did not work as prompted. Some small alteration had to be done in the model in order to continue the implementation of the control system. 
 
 \begin{figure}[ht]
     \centering
@@ -28,10 +31,3 @@ To work along network of path, a UAV is prompted to work in a specific area. Thi
 
 
 
-Motion controller (existing)
-Direct controller(existing)
-Inverse controller(existing)
-limit to the specific model (Hardcoded)
-
-GOAL: interactiion of each module
-it is proved that each module work as it should, but not tested as a whole for the system.
