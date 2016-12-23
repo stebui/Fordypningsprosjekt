@@ -1,23 +1,23 @@
 \chapter{Introduction}
 
-Robotics is commonly applied in industry to solve challenging tasks efficiently. One of the advantages of robotics lies in the fact that robots do not suffer from the same limitations as humans. Therefore, not only can robots perform many of the same tasks, but also tasks that seemingly would be physically impossible for a human being. An autonomous underwater vehicle (AUV) has traditionally been used for mapping and monitoring the ocean for military purposes. Today, its applications are frequently employed by the oil and gas industry, scientist and roboticists for commercial survey services. The advancements in technology has unlocked possibilities for complex missions, and improved the ability of the AUV to further interact with the surroundings. The degree of autonomy is based on how it gathers information of its environment, as well as how it adjusts and adapts to unpredicted variables.
+Robotics is commonly applied in industry to solve challenging tasks efficiently. One of the advantages of robotics lies in the fact that robots do not suffer from the same limitations as humans. Therefore, not only can robots perform many of the same tasks, but also tasks that seemingly would be physically impossible for a human being. An autonomous underwater vehicle (AUV) has traditionally been used for mapping and monitoring the ocean for military purposes. Today, its applications are frequently employed by the oil and gas industry, scientist and roboticists for commercial survey services. The advancements in technology have unlocked possibilities for complex missions, and improved the ability of the AUV to further interact with the surroundings. The degree of autonomy is based on how it gathers information of its environment, as well as how it adjusts and adapts to unpredicted variables.
 
 This thesis will describe the development of a control system based on geometrical models and forward kinematics for vehicles and tools with a graphical user interface (GUI). To facilitate for an autonomous mode, an implementation of a reference system is desired for setting up and altering paths while the software is in continuous operation.
-Existing functionality regarding forward and inverse kinematics, network of paths and a GUI will also be presented. The primary goal is to show how the system interacts with the developed functionality, and serve as a proof of concept on how operations between vehicle, tools and environment behave.
+Existing functionality regarding forward and inverse kinematics, network of paths and control interfaces will also be presented. The primary goal is to show how the system interacts with the developed functionality, and serve as a proof of concept on how operations between vehicle, tools and environment behave.
 
 \section{Background}
 
-The GeoMod project is an ongoing project that has been in development for more than ten years. The project was initiated to explore the vast applications that autonomous vehicles could offer, and is meant to be a learning and development platform for students. The principal aim for this project encompasses interesting issues concerning many types of vehicles. Over the years, changes and requirements have been altered to keep up with new technologies and software. In the present day, a prerequisite for GeoMod is to be a platform independent software and developed with the cross-platform application framework Qt. 
+The GeoMod project is an ongoing project that has been in development for more than ten years. The project was initiated to explore the vast applications that autonomous vehicles could offer, and is meant to be a learning and development platform for students. The principal aim of this project encompasses interesting issues concerning many types of vehicles. Over the years, changes and requirements have been altered to keep up with new technologies and software. In the present day, a prerequisite for GeoMod is to be a platform independent software and developed with the cross-platform application framework Qt. 
 
 \section{Objectives}
 \label{chap:objectives}
 
-From the project assignment, also found in appendix A Project Assignment, the interpreted objectives can be broken down to the following sub-objectives:
+From the project assignment, also found in appendix \textit{A Project Assignment}, the interpreted objectives can be broken down to the following sub-objectives:
 
 \begin{itemize}
   \item Establish a control system based on forward kinematics for vehicles and tools.
   \item Enable geometric models to follow a freely chosen, an absolute or a given path.
-  \item Enable inverse kinematics to regulate the relation between the manipulator and a chosen path.  
+  \item Enable inverse kinematics to regulate the relation between the vehicle and the tool tracking a chosen path.  
   \item Implement a GUI for the control system with consideration for autonomous mode used by other software.
 \end{itemize}
 
@@ -27,6 +27,6 @@ From the project assignment, also found in appendix A Project Assignment, the in
 
 \section{Approach}
 
-The essential overall understanding and familiarity with the existing system of GeoMod was required before starting with the practical parts of the assignment, i.e. coding. The associated functionalities that have been developed in the earlier phases of the project was needed to be comprehended. Many of the functions resolving some of the objectives already existed, but was implemented and hard-coded to work independently for testing and demonstration of a distinct solution. After getting known with the software and acquiring a clearly understanding of how it works, the implementation of a control system could begin. 
+The essential overall understanding and familiarity with the existing system of GeoMod were required before starting with the practical parts of the assignment, i.e. coding. The associated functionalities that have been developed in the earlier phases of the project was needed to be comprehended. Many of the functions resolving some of the objectives already existed, but was implemented and hard-coded to work independently for testing and demonstration of a distinct solution. After getting known with the software and acquiring a clearly understanding of how it works, the implementation of a control system could begin. 
 
-The control system is based on predefined geometrical models in GeoMod, made in earlier projects as a basis for testing. Parts of the existing library and modules required some minimal changes without affecting other parts of the software. Redesign was deemed necessary in some parts where consideration of graphical and functional areas of the software was not clearly defined.
+The implemented control system is based on predefined geometrical models in GeoMod, made in earlier projects as a basis for testing. Parts of the existing library and modules required some minimal changes without affecting other parts of the software. Redesign was deemed necessary in some parts where consideration of graphical and functional areas of the software was not clearly defined.

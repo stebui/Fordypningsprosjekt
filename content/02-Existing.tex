@@ -1,7 +1,7 @@
 \chapter{Software and Tools}
 \label{existing_tech}
 
-The existing system is based on works from previous student projects and master theses. An overview of the present methods and tools will be needed to address some of the current objectives. The following sections will introduce tools and functionality that plays a key role in this project.
+The existing system is based on works from previous student projects and master theses. An overview of the present methods and tools will be needed to address some of the current objectives. The following sections will introduce tools and functionalities that plays a key role in this project.
 
 \section{Qt}
 
@@ -30,7 +30,7 @@ The GeoMod software was developed as an environment for simulation and testing o
 \begin{figure}[ht]
     \centering
     \includegraphics[height=8cm]{images/Models.png}
-    \caption[The GeoMod viewport is showing a geometric model of a typical serial manipulator, pyramid and cube]{The GeoMod viewport is showing a geometric model of a typical serial manipulator, pyramid and cube.}
+    \caption[The GeoMod viewport is showing a geometric model of a typical serial manipulator,a pyramid and a cube]{The GeoMod viewport is showing a geometric model of a typical serial manipulator, a pyramid and a cube.}
     \label{fig:viewport}
 \end{figure}
 
@@ -46,11 +46,11 @@ During this project, there have been other students working in parallel with the
     \label{fig:modelspace}
 \end{figure}
 
-Models in GeoMod consist each of a transformation group of the class \textit{TGroup}, which contains geometric information of the model in Cartesian coordinate system. The class further consists of a basis that allows models to have their own coordinate system (model space). By setting an offset and orientation vector of the basis relative to the main coordinate system (world space), enables models to be moved and rotated in a three dimensional space (\Cref{fig:modelspace}). For the serial manipulator model, the same principle works on the joints. The model parts use an offset vector between the joint basis and the world space for position and orientation to create a linked model. Valid joint movements can be calculated from their bases through subroutines.
+Models in GeoMod consist each of a transformation group of the class \textit{TGroup}, which contains geometric information of the model in Cartesian coordinate system. The class further consists of a basis that allows models to have their own coordinate system (model space). By setting an offset vector and orientation of the basis relative to the main coordinate system (world space), enables models to be moved and rotated in a three-dimensional space (\Cref{fig:modelspace}). For the serial manipulator model, the same principle works on the joints. The model parts use an offset vector between the joint basis and the world space for position and orientation to create a linked model. Valid joint movements can be calculated from their bases through subroutines.
 
-The models used in this project came with each a panel for movement when the software was handed over. These panels are very limited as it only has translation and rotation options along one of the three axes. In \Cref{fig:controlcube} shows the panel for the model named "cube" consisting of buttons in the X, Y and Z directions with respect to translation and rotation. Movement is done incrementally as the step value is determined beforehand and hard-coded. 
+The models used in this project came with each a panel for movement when the software was handed over. These panels are very limited as it only has translation and rotation options along the three axes. In \Cref{fig:controlcube} shows the panel for the model named "cube" consisting of buttons in the X, Y and Z directions with respect to translation and rotation. Movement is done incrementally with a determined step value which is hard-coded. 
 
-A panel for movement was included with each model used in this project, when the software was handed over. These panels are very limited considering that there are only translation and rotation options along one of the three axes. In \Cref{fig:controlcube} a panel for the model \textit{Cube} is shown. It consists of buttons for X, Y and Z directions with respect to translation and rotation. Movement is done incrementally as the step value is determined beforehand and hard-coded. The panel also contains a functionality to save the sequence of motion of the model to repeat the same movement. Dejectedly, this feature has not yet been implemented in the currently given version of GeoMod. 
+A panel for movements was included with each model used in this project, when the software was handed over. These panels are very limited considering that there are only translation and rotation options along one of the three axes. In \Cref{fig:controlcube} a panel for the model \textit{Cube} is shown. It consists of buttons for X, Y and Z directions with respect to translation and rotation. Movement is done incrementally as the step value is determined beforehand and hard-coded. The panel also contains a functionality to save the sequence of motion of the model to repeat the same movement. Dejectedly, this feature has not yet been implemented in the currently given version of GeoMod. 
 
 \begin{figure}[ht]
     \centering
@@ -62,6 +62,6 @@ A panel for movement was included with each model used in this project, when the
 
 \subsection{Paths}
 
-In GeoMod a basic proof of concept for paths created as a network, have been implemented by Martin Lygre Furevik in his master thesis, Spring 2016. In his work, paths are implemented like models. As models are created with GeomNode and GeomEdge, paths are also formed by edges connected to nodes. Paths and models share many of the same properties and features that can be used interchangeably. This implies that paths can be moved and rotated like models as they also contain geometric data within a transformation group. A network of paths is made of a list of edges and nodes that count as linear or curved lines for guidance. 
+In GeoMod a basic proof of concept for paths created as a network, have been implemented by Martin Lygre Furevik in his master thesis. In his work, paths are implemented like models. As models are created with GeomNode and GeomEdge, paths are also formed by edges connected to nodes. Paths and models share many of the same properties and features that can be used interchangeably. This implies that paths can be moved and rotated like models as they also contain geometric data within a transformation group. A network of paths is made of a list of edges and nodes that count as linear or curved lines for guidance. 
 
 The handed GeoMod version included a path object resemblance to a cube. As with dynamic linking, there is also another student working in parallel with this assignment to manage creation and editing of paths at runtime.
