@@ -17,7 +17,7 @@
 \usepackage{pdfpages} %add pdf as pages
 \usepackage{glossaries} % for abbreviation list
 \usepackage{subfig} % multiple images in one figure
-
+\usepackage[labelfont=bf]{caption} 
 %\usepackage[doublespacing]{setspace}
 %\usepackage[nopostdot,style=super,nonumberlist,toc]{glossaries}
 
@@ -61,7 +61,7 @@
 \listoffigures
 %\addcontentsline{toc}{chapter}{\listfigurename}
 
-\listoftables
+%\listoftables
 %\addcontentsline{toc}{chapter}{\listtablename}
 
 \glsaddall % make it possible to print glossary without references
@@ -79,7 +79,7 @@
 \input{content/04-ControlSystem.tex}
 \input{content/05-ControllingTools.tex}
 %\input{content/XX-Discussion.tex}
-\input{content/XX-Conclusion.tex}
+\input{content/06-Conclusion.tex}
 
 % Bibliography - edit references.bib and use the \cite command in text
 \renewcommand{\bibname}{References}
@@ -94,12 +94,21 @@
 \phantomsection
 \addcontentsline{toc}{chapter}{Appendix}
 
-\pagenumbering{arabic}% resets `page` counter to 1
-\renewcommand*{\thepage}{A-\arabic{page}}
+\addcontentsline{toc}{chapter}{A Project Assignment}
+
+
+\addcontentsline{toc}{chapter}{B Formal Project requirement}
+
+
+\addcontentsline{toc}{chapter}{C Risk Assessment}
+
+%\pagenumbering{arabic}% resets `page` counter to 1
+%\renewcommand*{\thepage}{A-\arabic{page}}
+
 
 \input{appendix/A-1.tex}
-%\addcontentsline{toc}{chapter}{B Project Assignment}
 \input{appendix/A-2.tex}
-%\addcontentsline{toc}{chapter}{C Risk Assessment}
+\input{appendix/A-3.tex}
+
 
 \end{document}
